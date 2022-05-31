@@ -620,7 +620,7 @@ class MainTest {
       .map(x => (x.toString(), 1))
       .reduceByKey(_ + _)
       .map(t => (t.toString(), 1))
-
+//    println(res.count()); println(res.join(expected).count())
     assert(res.count() == res.join(expected).count())
 
     assert((aggregator.getKeywordQueryResult(List("independent-film")) - 2.99378).abs < 0.001)

@@ -16,5 +16,10 @@ class NNLookup(lshIndex: LSHIndex) extends Serializable {
    * @return The RDD of (keyword list, resut) pairs
    */
   def lookup(queries: RDD[List[String]])
-  : RDD[(List[String], List[(Int, String, List[String])])] = ???
+  : RDD[(List[String], List[(Int, String, List[String])])] = {
+    val title_sig = lshIndex.hash(queries)
+    val res_lookup = lshIndex.lookup(title_sig).map(x => (x._2, x._3))
+
+    res_lookup
+  }
 }
