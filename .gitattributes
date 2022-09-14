@@ -1,2 +1,4 @@
 src/main/resources/ratings-all.csv filter=lfs diff=lfs merge=lfs -text
 src/main/resources/titles-all.csv filter=lfs diff=lfs merge=lfs -text
+target/scala-2.11/classes/rating-all.csv filter=lfs diff=lfs merge=lfs -text
+target/scala-2.11/classes/titles-all.csv filter=lfs diff=lfs merge=lfs -text
